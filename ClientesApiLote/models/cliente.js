@@ -2,7 +2,7 @@ const {Schema, model, trusted} = require('mongoose')
 
 const ClienteSchema = ({
     id:{
-        type: Number,
+        type: String,
         unique:true,
         required:[true, 'El id es necesario']
     },
