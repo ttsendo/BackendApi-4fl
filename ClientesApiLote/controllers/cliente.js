@@ -29,11 +29,11 @@ const postCliente = async(req, res) => {
 
 const mongoose = require('mongoose');
 const putCliente = async(req, res) =>{
-    const { id, nombre, apellido, email, telefono, password} = req.body;
+    const { id, nombre, apellido, email, telefono, ciudad, password} = req.body;
     try {
         const cliente = await Cliente.findOneAndUpdate(
             { id: id }, 
-            { nombre, apellido, email, telefono, password },
+            { nombre, apellido, email, telefono, ciudad, password },
             { new: true }
         );
         if (!cliente) {
