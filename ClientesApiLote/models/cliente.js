@@ -31,6 +31,12 @@ const ClienteSchema = ({
         required:[true, 'El telefono es necesario'],
     },
 
+     ciudad:{
+        type:String,
+        unique: false,
+        required:[true, 'La Ciudad es necesaria'],
+    },
+
     password:{
         type:String,
         unique: false,
