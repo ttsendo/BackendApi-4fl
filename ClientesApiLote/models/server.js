@@ -8,6 +8,7 @@ class Server{
         this.app = express()
         this.port = process.env.PORT
         this.clientePath = '/clientes'
+        this.ventaPath = '/ventas'
         this.middlewares()
         this.routes()
         this.conectarDB()
@@ -22,6 +23,7 @@ class Server{
     }
     routes(){
         this.app.use(this.clientePath, require('../routes/cliente'))
+        this.app.use(this.ventaPath, require('../routes/venta'))
     }
 
     middlewares(){//
